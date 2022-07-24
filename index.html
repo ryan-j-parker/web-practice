@@ -5,27 +5,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/soundboard-banner.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <title>Web App</title>
+    <title>Nature Mood Soundboard</title>
 </head>
 
 <body>
     <header>
-        <img src="/assets/html_css_js.png">
-        <h1>Web App</h1>
+        <img id="header-image" src="/assets/alchemy-favicon.png" alt="alchemy code lab logo" />
+        <h2>Soundboard App</h2>
     </header>
 
     <main>
+        <h1>Click on an image to play its sound</h1>
+        <div class="parent">
+            <div class="fireplace" id="fireplace-btn" onclick="javascript:toggleSound();">
+                <img id="fireplace-img" src="/assets/fireplace.png" alt="fire burning in fireplace" />
+                <audio src="/assets/lit-fireplace-6307.mp3" id="fireplace"></audio>
+            </div>
+            <div class="underwater" id="underwater-btn" onclick="javascript:toggleSound();">
+                <img id="underwater-img" src="/assets/kelp-forest.png" alt="fish swimming in kelp forest" />
+                <audio src="/assets/underwater-ambience.mp3" id="underwater"></audio>
+            </div>
+            <div class="seagulls" id="seagulls-btn" onclick="javascript:toggleSound();">
+                <img id="seagulls-img" src="/assets/seagulls.png" alt="seagulls flying in front of a pier" />
+                <audio src="/assets/seagulls.mp3" id="seagulls"></audio>
+            </div>
+            <div class="arctic" id="arctic-btn">
+                <img id="arctic-img" src="/assets/arctic.png" alt="arctic tundra landscape" />
+                <audio src="/assets/cold-arctic-wind.mp3" id="arctic"></audio>
+            </div>
+            <div class="crickets" id="crickets-btn"> 
+                <img id="crickets-img" src="/assets/crickets.png" alt="rustic cabin in field at night" />
+                <audio src="/assets/night-insects.mp3" id="crickets"></audio>
+            </div>
+            <div class="rainy-day" id="rainy-btn"> 
+                <img id="rainy-img" src="/assets/rainy-day.png" alt="rain on a glass window" />
+                <audio src="/assets/rainy-day.wav" id="rainy-day"></audio>
+            </div>
+            <div class="forest" id="forest-btn"> 
+                <img id="forest-img" src="/assets/forest.png" alt="forest landscape" />
+                <audio src="/assets/swedish-forest.wav" id="forest"></audio>
+            </div>
+            <div class="river" id="river-btn"> 
+                <img id="river-img" src="/assets/river2.png" alt="river in the distance" />
+                <audio src="/assets/rocky-river.wav" id="river"></audio>
+            </div>
+            <div class="space" id="space-btn"> 
+                <img id="space-img" src="/assets/jupiter.png" alt="representation of the planet jupiter" />
+                <audio src="/assets/space.wav" id="space"></audio>
+            </div>
+        </div>
 
+
+
+
+        <!--<div id="div-button">Button</div>-->
     </main>
 
-    <footer>&copy;2022 Software Developer</footer>
+    <footer>&copy;2022 Ryan J. Parker</footer>
 
     <script type="module" src="app.js"></script>
 </body>
