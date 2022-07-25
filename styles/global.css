@@ -72,6 +72,11 @@ h1 {
     overflow-wrap: break-word;
 }
 
+h2 {
+    color: #00877CCA;
+    margin-left: 6px;
+    margin-bottom: 5px;
+}
 
 .parent {
     display: grid;
