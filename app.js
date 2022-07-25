@@ -19,6 +19,14 @@ fireplaceBtn.addEventListener('click', (e) => {
     fireplace.pause();
     e.stopPropagation();
   };
+  if (typeof fireplace.loop === 'boolean') {
+    fireplace.loop = true;
+  } else {
+    fireplace.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
 });
 
 // underwater
@@ -32,6 +40,14 @@ underwaterBtn.addEventListener('click', (e) => {
     underwater.pause();
     e.stopPropagation();
   };
+  if (typeof underwater.loop === 'boolean') {
+    underwater.loop = true;
+  } else {
+    underwater.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
 });
 
 // seagulls
@@ -45,6 +61,14 @@ seagullsBtn.addEventListener('click', (e) => {
     seagulls.pause();
     e.stopPropagation();
   };
+  if (typeof seagulls.loop === 'boolean') {
+    seagulls.loop = true;
+  } else {
+    seagulls.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
 });
 
 // arctic wind
@@ -58,10 +82,18 @@ arcticBtn.addEventListener('click', (e) => {
     arctic.pause();
     e.stopPropagation();
   };
+  if (typeof arctic.loop === 'boolean') {
+    arctic.loop = true;
+  } else {
+    arctic.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
 });
 
 // crickets
-const crickets = new Audio('/assets/night-insects.mp3');
+const crickets = new Audio('/assets/night-crickets.wav');
 const cricketsBtn = document.getElementById('crickets-btn');
 
 cricketsBtn.addEventListener('click', (e) => {
@@ -74,7 +106,7 @@ cricketsBtn.addEventListener('click', (e) => {
 });
 
 // rainy day
-const rainy = new Audio('/assets/rainy-day.wav');
+const rainy = new Audio('/assets/rain-and-thunder.mp3');
 const rainyBtn = document.getElementById('rainy-btn');
 
 rainyBtn.addEventListener('click', (e) => {
@@ -97,6 +129,14 @@ forestBtn.addEventListener('click', (e) => {
     forest.pause();
     e.stopPropagation();
   };
+  if (typeof forest.loop === 'boolean') {
+    forest.loop = true;
+  } else {
+    forest.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
 });
 
 // rocky river
@@ -110,7 +150,17 @@ riverBtn.addEventListener('click', (e) => {
     river.pause();
     e.stopPropagation();
   };
+  if (typeof river.loop === 'boolean') {
+    river.loop = true;
+  } else {
+    river.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
 });
+
+river.loop = true;
 
 // space
 const space = new Audio('/assets/space.mp3');
@@ -123,4 +173,12 @@ spaceBtn.addEventListener('click', (e) => {
     space.pause();
     e.stopPropagation();
   };
+  if (typeof space.loop === 'boolean') {
+    space.loop = true;
+  } else {
+    space.addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    }, false);
+  }
 });
